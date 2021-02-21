@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.credit-card {
+  background: gray;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.icon-chip {
+  max-width: 50px;
+  display: inline;
+  position: relative;
+
+  left: 5%;
+  top: 30%;
+}
+
+.credit-card__logo {
+  position: relative;
+  display: inline-block;
+  max-height: 40px;
+  max-width: 120px;
+  margin: 0;
+  left: 200px;
+}
+
+.card_number {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+  left: 5%;
+  top: 40%;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+.inputNameAndDate {
+  position: relative;
+  margin: 0 auto;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 90%;
+
+  font-size: 1.2em;
+}
+
+.inputUsername {
+  display: block;
+  margin-bottom: 1em;
+}
+label {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.formInput {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
+.card-number-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.input-card-num {
+  max-width: 20%;
+}
+
+.buttonSave {
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  background-color: blue;
+  color: white;
+  padding: 0.5em 0;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.buttonSave:hover,
+.buttonSave:focus {
+  transform: scale(1.1);
+}
+
+.buttonSave:disabled {
+  background-color: gray;
+}
+
+.buttonSave:disabled:hover {
+  transform: scale(1);
+}

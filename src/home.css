@@ -1,0 +1,23 @@
+.credit-card-add {
+  background: gray;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.credit-card-add > span {
+  position: relative;
+  margin: 0;
+  top: 25%;
+  font-size: 5em;
+  color: white;
+  transform: translate(-50%, 0);
+}
+
+.link-text {
+  text-decoration: none;
+  color: black;
+}

@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link, Redirect, Switch, Route } from "react-router-dom";
+import "./App.css";
+import AddCreditCard from "./AddCreditCard";
+import Home from "./home";
 
 function App() {
+  function allStorage() {
+    var values = [],
+      keys = Object.keys(localStorage),
+      i = keys.length;
+    while (i--) {
+      values.push(localStorage.getItem(keys[i]));
+    }
+
+    return values;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {allStorage().length === 0 ? (
+        <Redirect from="/" to="/cards/add" />
+      ) : (
+        <Redirect from="/" to="/cards" />
+      )}
+      <Switch>
+        <Route exact path="/cards">
+          <Home />
+        </Route>
+        <Route path="/cards/add">
+          <AddCreditCard />
+        </Route>
+        <Route path="/cards/{id}/edit">
+          <AddCreditCard />
+        </Route>
+      </Switch>
     </div>
   );
 }
